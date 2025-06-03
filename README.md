@@ -21,7 +21,7 @@ ProductDetails: details_screen.png
 Setup
 
 Clone Repository:
-git clone https://github.com/ayolateef/minimart-project.git
+git clone https://github.com/ayolateef/MiniMart-eCommerce-App.git
 cd minimart-project
 
 
