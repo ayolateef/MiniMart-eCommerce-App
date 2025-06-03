@@ -208,7 +208,7 @@ class ProductDetailScreen extends StatelessWidget {
                       onPressed: () {
                         cartProvider.addToCart(product);
                         ToastWidget.show(context, 'Item has been added to cart');
-                        Future.delayed(const Duration(seconds: 4), () {
+                        Future.delayed(const Duration(seconds: 2), () {
                           if (context.mounted) {
                             Provider.of<BottomNavProvider>(context, listen: false)
                                 .setIndex(2);
