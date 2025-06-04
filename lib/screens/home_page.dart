@@ -70,7 +70,7 @@ class BottomNav extends StatelessWidget {
                 labelText: 'Cart',
                 badgeCount: cartProvider.cartItemCount,
                 onPressed: () {
-                  bottomNavProvider.setIndex(2);
+                  bottomNavProvider.setIndex(1);
                 },
               ),
               BottomNavColumn(
@@ -78,7 +78,7 @@ class BottomNav extends StatelessWidget {
                 isActive: bottomNavProvider.currentIndex == 2,
                 labelText: 'Favorite',
                 onPressed: () {
-                  bottomNavProvider.setIndex(1);
+                  bottomNavProvider.setIndex(2);
                 },
               ),
               BottomNavColumn(

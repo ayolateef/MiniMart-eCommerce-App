@@ -9,6 +9,7 @@ import '../providers/cart_provider.dart';
 import '../themes/app_svgs.dart';
 import '../themes/text_style.dart';
 import '../utils/app_colors.dart';
+import '../utils/app_router.dart';
 import '../widgets/button.dart';
 import '../widgets/cart_item_card.dart';
 
@@ -31,12 +32,15 @@ class CartScreen extends StatelessWidget {
             style: AppTextStyles.addressText.copyWith(fontSize: 18.sp),
           ),
           SizedBox(height: 16.h),
-          CustomButton(
-            text: 'Shop Now',
-            onPressed: () {
-              Provider.of<BottomNavProvider>(context, listen: false)
-                  .setIndex(0);
-            },
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: CustomButton(
+              text: 'Shop Now',
+              onPressed: () {
+                Provider.of<BottomNavProvider>(context, listen: false)
+                    .setIndex(0);
+              },
+            ),
           ),
         ],
       ),
@@ -91,16 +95,32 @@ class CartScreen extends StatelessWidget {
           Padding(
             padding:
             EdgeInsets.symmetric(horizontal: 16.w, vertical: 8.h),
-            child: Row(
-              children: [
-                Text(
-                  'Your Cart',
-                  style: AppTextStyles.addressText.copyWith(
-                    fontWeight: FontWeight.w600,
-                    fontSize: 18.sp,
+            child: GestureDetector(
+    onTap: () {
+    if (Navigator.canPop(context)) {
+    Navigator.pop(context);
+    } else {
+    Navigator.pushReplacementNamed(context, RoutePath.homeScreen);
+    Provider.of<BottomNavProvider>(context, listen: false).setIndex(0);
+    }
+    },
+              child: Row(
+                children: [
+                  Icon(
+                    Icons.arrow_back_ios,
+                    size: 14.w,
+                    color: AppColors.iconColor,
                   ),
-                ),
-              ],
+                  SizedBox(width: 10.w),
+                  Text(
+                    'Your Cart',
+                    style: AppTextStyles.addressText.copyWith(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 18.sp,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
           Divider(

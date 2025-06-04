@@ -21,6 +21,7 @@ class CartItemCard extends StatelessWidget {
     final displayName = cartItem.product.name.replaceAll('\n', ' ');
 
     return Card(
+      elevation: 0.1,
       color: AppColors.cardGreyColor,
       margin: EdgeInsets.symmetric(vertical: 8.h),
       child: Padding(
@@ -58,29 +59,7 @@ class CartItemCard extends StatelessWidget {
                     ),
                   ),
                   5.verticalSpace,
-                  // Row(
-                  //   children: [
-                  //     IconButton(
-                  //       icon: Icon(Icons.remove, size: 20.w),
-                  //       onPressed: () {
-                  //         cartProvider.updateQuantity(index, cartItem.quantity - 1);
-                  //       },
-                  //     ),
-                  //     Text('${cartItem.quantity}', style: AppTextStyles.addressText),
-                  //     IconButton(
-                  //       icon: Icon(Icons.add, size: 20.w),
-                  //       onPressed: () {
-                  //         cartProvider.updateQuantity(index, cartItem.quantity + 1);
-                  //       },
-                  //     ),
-                  //     IconButton(
-                  //       icon: Icon(Icons.delete, size: 20.w),
-                  //       onPressed: () {
-                  //         cartProvider.removeFromCart(index);
-                  //       },
-                  //     ),
-                  //   ],
-                  // ),
+
 
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
