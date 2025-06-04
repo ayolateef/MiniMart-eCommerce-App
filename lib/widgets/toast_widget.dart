@@ -30,7 +30,7 @@ class ToastWidget extends StatelessWidget {
 
     overlay.insert(_currentEntry!);
 
-    Future.delayed(const Duration(seconds: 3), () {
+    Future.delayed(const Duration(seconds: 4), () {
       _currentEntry?.remove();
       _currentEntry = null;
     });
