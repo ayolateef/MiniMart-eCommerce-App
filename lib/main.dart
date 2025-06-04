@@ -31,7 +31,15 @@ class MyApp extends StatelessWidget {
               highlightColor: Colors.transparent,
               colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primary),
               scaffoldBackgroundColor: AppColors.background,
-              fontFamily: 'IBMPlexSans',
+              fontFamily: GoogleFonts.ibmPlexMono().fontFamily,
+              fontFamilyFallback: const ['Roboto', 'sans-serif'],
+              textTheme: GoogleFonts.ibmPlexMonoTextTheme(
+                Theme.of(context).textTheme,
+              ).copyWith(
+                bodyLarge: TextStyle(fontFamily: GoogleFonts.ibmPlexMono().fontFamily),
+                bodyMedium: TextStyle(fontFamily: GoogleFonts.ibmPlexMono().fontFamily),
+                bodySmall: TextStyle(fontFamily: GoogleFonts.ibmPlexMono().fontFamily),
+              ),
               useMaterial3: true,
             ),
             navigatorKey: NavKey.appNavKey,
