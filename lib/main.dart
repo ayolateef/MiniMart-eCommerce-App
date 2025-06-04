@@ -31,14 +31,12 @@ class MyApp extends StatelessWidget {
               highlightColor: Colors.transparent,
               colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primary),
               scaffoldBackgroundColor: AppColors.background,
-              fontFamily: GoogleFonts.ibmPlexMono().fontFamily,
+              fontFamily: 'IBMPlexSans',
               fontFamilyFallback: const ['Roboto', 'sans-serif'],
-              textTheme: GoogleFonts.ibmPlexMonoTextTheme(
-                Theme.of(context).textTheme,
-              ).copyWith(
-                bodyLarge: TextStyle(fontFamily: GoogleFonts.ibmPlexMono().fontFamily),
-                bodyMedium: TextStyle(fontFamily: GoogleFonts.ibmPlexMono().fontFamily),
-                bodySmall: TextStyle(fontFamily: GoogleFonts.ibmPlexMono().fontFamily),
+              textTheme: const TextTheme(
+                bodyLarge: TextStyle(fontFamily: 'IBMPlexSans'),
+                bodyMedium: TextStyle(fontFamily: 'IBMPlexSans'),
+                bodySmall: TextStyle(fontFamily: 'IBMPlexSans'),
               ),
               useMaterial3: true,
             ),

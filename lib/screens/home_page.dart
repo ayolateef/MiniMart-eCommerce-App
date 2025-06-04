@@ -29,8 +29,8 @@ class BottomNav extends StatelessWidget {
 
     final screens = [
       const ProductListScreen(),
-      const FavoriteScreen(),
       const CartScreen(),
+      const FavoriteScreen(),
       const Placeholder(),
     ];
 
@@ -65,20 +65,20 @@ class BottomNav extends StatelessWidget {
                 },
               ),
               BottomNavColumn(
-                icon: AppSvgs.favIcon,
-                isActive: bottomNavProvider.currentIndex == 1,
-                labelText: 'Favorite',
-                onPressed: () {
-                  bottomNavProvider.setIndex(1);
-                },
-              ),
-              BottomNavColumn(
                 icon: AppSvgs.cartIcon,
-                isActive: bottomNavProvider.currentIndex == 2,
+                isActive: bottomNavProvider.currentIndex == 1,
                 labelText: 'Cart',
                 badgeCount: cartProvider.cartItemCount,
                 onPressed: () {
                   bottomNavProvider.setIndex(2);
+                },
+              ),
+              BottomNavColumn(
+                icon: AppSvgs.favIcon,
+                isActive: bottomNavProvider.currentIndex == 2,
+                labelText: 'Favorite',
+                onPressed: () {
+                  bottomNavProvider.setIndex(1);
                 },
               ),
               BottomNavColumn(

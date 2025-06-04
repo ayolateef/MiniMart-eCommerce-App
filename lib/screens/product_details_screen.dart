@@ -211,7 +211,7 @@ class ProductDetailScreen extends StatelessWidget {
                         Future.delayed(const Duration(seconds: 2), () {
                           if (context.mounted) {
                             Provider.of<BottomNavProvider>(context, listen: false)
-                                .setIndex(2);
+                                .setIndex(1);
                           }
                         });
                       },
